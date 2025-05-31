@@ -1,4 +1,8 @@
+import os
 from openai import OpenAI
+from dotenv import load_dotenv
 
-client = OpenAI(api_key="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")
-serpapi_key = "e714043198f8648fda65454536bcd165b735d925fc2b49ed3f6562dae2cba1ce"
+load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+serpapi_key = os.getenv("SERPAPI_KEY")
